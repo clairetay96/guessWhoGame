@@ -3,18 +3,23 @@
 <head>
     <title>Guess Which</title>
     <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="header">
         <h1>Guess Which?</h1>
     </div>
     <div class="user-inputs">
-        <h3>Type in a random first name and guess the actor!</h3>
-        <input type="text" id="actor" placeholder="actor name" autocomplete="off">
-        <input type="number" id="number" max="8" min="4" value="4">
-        <input type="number" id="option-no" min="2" max="8" value="2">
+        <h3>Type in a random name (eg Chris, Lauren) and guess the actor!</h3><br>
+        <label for="actor">Name: </label>
+        <input type="text" id="actor" placeholder="actor name" autocomplete="off"><br>
+        <label for="number">Number of actors: </label>
+        <input type="number" id="number" max="8" min="4" value="4"><br>
+        <label for="option-no">Number of options: </label>
+        <input type="number" id="option-no" min="2" max="8" value="2"><br>
         <button id="submit">Let's go!</button>
     </div>
+    <div class="inputerror-container"></div>
     <div class="game-container"></div>
     <div class="result"></div>
 
