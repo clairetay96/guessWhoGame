@@ -8,6 +8,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	width: 95%;
+	box-sizing: border-box;
 }
 
 h1 {
@@ -73,6 +74,33 @@ input {
 	margin: 0 auto;
 }
 
+.image-div {
+	position: relative;
+}
+
+.tile-div {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	z-index: 10;
+}
+
+.tile-div *.transparent{
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.tile-div *{
+	background-color: white;
+	border: 0.1px solid black;
+	opacity: 1;
+
+}
+
 .inputerror-container div{
 	margin: 5px auto 20px;
 	width: 80%;
@@ -105,22 +133,25 @@ input {
 	flex-wrap: wrap;
 	justify-content: center;
 	margin: 0 auto;
+}
 
+.result-images * {
+	padding: 5px;
+	text-align: center;
+	width: 80%;
 }
 
 .result p {
 	display: block;
 	text-align: center;
-	margin: 10px auto;
+	font-size: 18px;
+	margin: 5px auto;
 }
 
 .score{
 	font-size: 30px;
 }
 
-.guess {
-	font-size: 12px;
-}
 
 .result button {
 	display: block;
